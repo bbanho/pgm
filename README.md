@@ -4,7 +4,7 @@
 ## Objectives
 
 * write a program capable of read, write and generate simple pgm images for future data visualization
-* write fuctions capable of manipulete these images
+* write fuctions capable of manipulating these images
   * normalization
   * binarization
   * border detection

@@ -29,6 +29,12 @@ int main(int argc, char *argv[]){
   Pgm circle_noise = generateNoise(circle);
   savePgm(circle_noise,255,"newcircle.pgm");
 
+  // try to remove
+  Pgm no_noise = binariza(normaliza(circle_noise),100);
+  savePgm(no_noise,255,"no_noise.pgm");
+
+  savePgm(normaliza(no_noise),255,"art.pgm");
+
 //  Pgm noise = generateNoise(loadPgm(argv[1]));
 //  savePgm(noise,255,"noise.pgm");
 //
@@ -45,7 +51,7 @@ Pgm generateNoise(Pgm img){
   srand(123);
   for(unsigned int i=0;i<img.alt;i++){
     for(unsigned int j=0;j<img.larg;j++){
-      img.data[i][j]=(3*img.data[i][j]+rand()%255)/4;
+      img.data[i][j]=(img.data[i][j]+rand()%255)/1.8;
     }
   }
   return img;

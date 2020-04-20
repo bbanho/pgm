@@ -5,12 +5,13 @@
 
 * write a program capable of read, write and generate simple pgm images for future data visualization
 * write fuctions capable of manipulating these images
-  * normalization
-  * binarization
+  * noise reduction
   * geometric description of circles
-  * in the future: geometric aproximation of shapes of interest
 
 ### Plan of implementation: first stage
+  - [x] generate a noisy image of a circle
+    - [x] draw a circle by giving parameters
+    - [x] apply noise filter
   - [x] generate and remove greyscale noise
     - [x] normalization
     - [x] binarization
@@ -19,10 +20,6 @@
     - [ ] absolute description of border
     - [ ] relative positioning
     - [ ] collisions?
-
-## Methods
-  * usage of greyscale of netbpm standard (pgm) and Gimp
-  * implementation in C using Linux standard libraries
 
 ## Results
   

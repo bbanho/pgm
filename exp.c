@@ -7,7 +7,7 @@ typedef struct Pgm {
   unsigned char **data;
 } Pgm;
 
-Pgm binaliza(Pgm img, unsigned int c);
+Pgm binariza(Pgm img, unsigned int c);
 Pgm normaliza(Pgm img);
 Pgm loadPgm(char *filename);
 int savePgm(Pgm img, unsigned int c, char *filename);
@@ -19,7 +19,7 @@ int main(int argc, char *argv[]){
   return 0;
 }
 
-Pgm binaliza(Pgm img,unsigned int c){
+Pgm binariza(Pgm img,unsigned int c){
   for(unsigned int i=0;i<img.alt;i++){
     for(unsigned int j=0;j<img.larg;j++){
       if(img.data[i][j]>c){

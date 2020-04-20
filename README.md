@@ -16,7 +16,7 @@
     - [x] binarization
   - [ ] obtain multiple circle geometry
     - [ ] absolute position of center
-    - [ ] absolute description of border (collisions?)
+    - [ ] absolute description of border
     - [ ] relative positioning
     - [ ] collisions?
 

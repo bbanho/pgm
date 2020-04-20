@@ -15,10 +15,10 @@
     - [x] normalization
     - [x] binarization
   - [ ] obtain multiple circle geometry
-    -[ ] absolute position of center
-    -[ ] absolute description of border (collisions?)
-    -[ ] relative positioning
-    -[ ] collisions?
+    - [ ] absolute position of center
+    - [ ] absolute description of border (collisions?)
+    - [ ] relative positioning
+    - [ ] collisions?
 
 ## Methods
   usage of greyscale of netbpm (pgm) and Gimp

@@ -11,7 +11,7 @@
   * in the future: geometric aproximation of shapes of interest
 
 ### Plan of implementation: first stage
-  -[x] remove greyscale noise
+  - [x] remove greyscale noise
     - [x] normalization
     - [x] binarization
   - [ ] obtain multiple circle geometry

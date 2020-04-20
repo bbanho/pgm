@@ -15,7 +15,7 @@ int savePgm(Pgm img, unsigned int c, char *filename);
 int main(int argc, char *argv[]){
   Pgm input;
   input = loadPgm(argv[1]);
-  savePgm(normaliza(binariza(input,100)),255,"output.pgm");
+  savePgm(normaliza(binariza(input,1)),255,"output.pgm");
 
   return 0;
 }
@@ -34,10 +34,8 @@ Pgm binariza(Pgm img,unsigned int c){
 }
 
 Pgm normaliza(Pgm img){
-
   unsigned char ker[3][3];
   float pix_s=0;
-
   for(unsigned int i=1;i<img.alt-1;i++){
     for(unsigned int j=1;j<img.larg-1;j++){
       //  i-1,j-1  i-1,j  i-1,j+1
@@ -52,10 +50,8 @@ Pgm normaliza(Pgm img){
       pix_s=0;
     }
   }
-
   return img;
 }
-
 
 Pgm loadPgm(char *filename){
   Pgm img;
@@ -76,7 +72,6 @@ Pgm loadPgm(char *filename){
 }
 
 int savePgm(Pgm img, unsigned int c, char *filename){
-
   FILE *f;
   f=fopen(filename, "wb");
   fprintf(f,"%s %d %d\n%d\n",img.magic,img.larg,img.alt,c);

@@ -10,6 +10,6 @@
   * border detection
   * geometric border description
 
-![Input 1](in.png)
+> ![Input 1](in.png)
 ![Input 1](in2.png)
 ![Input 1](in3.png)

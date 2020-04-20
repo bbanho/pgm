@@ -15,8 +15,7 @@ int savePgm(Pgm img, unsigned int c, char *filename);
 int main(int argc, char *argv[]){
   Pgm input;
   input = loadPgm(argv[1]);
-  savePgm(normaliza(binariza(input,1)),255,"output.pgm");
-
+  savePgm(normaliza(binariza(input,1)),255,argv[2]);
   return 0;
 }
 

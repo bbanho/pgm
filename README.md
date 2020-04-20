@@ -21,7 +21,7 @@
     - [ ] collisions?
 
 ## Methods
-  * usage of greyscale of netbpm (pgm) and Gimp
+  * usage of greyscale of netbpm standard (pgm) and Gimp
   * implementation in C using Linux standard libraries
 
 ## Results

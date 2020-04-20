@@ -11,7 +11,7 @@
   * in the future: geometric aproximation of shapes of interest
 
 ### Plan of implementation: first stage
-  - [x] remove greyscale noise
+  -[x] remove greyscale noise
     - [x] normalization
     - [x] binarization
   - [ ] obtain multiple circle geometry
@@ -21,8 +21,8 @@
     - [ ] collisions?
 
 ## Methods
-  usage of greyscale of netbpm (pgm) and Gimp
-  implementation in C using Linux standard libraries
+  * usage of greyscale of netbpm (pgm) and Gimp
+  * implementation in C using Linux standard libraries
 
 ## Results
   
@@ -30,4 +30,5 @@
 
 ![Input 1](in.png)
 ![Input 1](in2.png)
+![Input 1](in3.png)
 ![Input 1](in3.png)

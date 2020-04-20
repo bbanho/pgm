@@ -7,9 +7,27 @@
 * write fuctions capable of manipulating these images
   * normalization
   * binarization
-  * border detection
-  * geometric border description
+  * geometric description of circles
+  * in the future: geometric aproximation of shapes of interest
 
-> ![Input 1](in.png)
+### Plan of implementation: first stage
+  -[x] remove greyscale noise
+    - [x] normalization
+    - [x] binarization
+  -[] obtain multiple circle geometry
+    -[] absolute position of center
+    -[] absolute description of border (collisions?)
+    -[] relative positioning
+    -[] collisions?
+
+## Methods
+  usage of greyscale of netbpm (pgm) and Gimp
+  implementation in C using Linux standard libraries
+
+## Results
+  
+  > todo
+
+![Input 1](in.png)
 ![Input 1](in2.png)
 ![Input 1](in3.png)

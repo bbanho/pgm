@@ -10,4 +10,4 @@
   * border detection
   * geometric border description
 
-
+![Input 1](in2.pgm)

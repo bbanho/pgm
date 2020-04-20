@@ -11,14 +11,14 @@
   * in the future: geometric aproximation of shapes of interest
 
 ### Plan of implementation: first stage
-  -[x] remove greyscale noise
+  - [x] remove greyscale noise
     - [x] normalization
     - [x] binarization
-  -[] obtain multiple circle geometry
-    -[] absolute position of center
-    -[] absolute description of border (collisions?)
-    -[] relative positioning
-    -[] collisions?
+  - [ ] obtain multiple circle geometry
+    -[ ] absolute position of center
+    -[ ] absolute description of border (collisions?)
+    -[ ] relative positioning
+    -[ ] collisions?
 
 ## Methods
   usage of greyscale of netbpm (pgm) and Gimp

@@ -27,8 +27,3 @@
 ## Results
   
   > todo
-
-![Input 1](img/in.png)
-![Input 1](img/in2.png)
-![Input 1](img/in3.png)
-![Input 1](img/in3.png)

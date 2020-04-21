@@ -119,7 +119,6 @@ Pgm loadPgm(char *filename){
     } else {
       img.larg=DEF_LARG; img.alt=DEF_ALT;
       strcpy(img.magic,"P5");
-      fprintf(f,"%s %d %d\n%d\n",img.magic,img.larg,img.alt,255);
       img.data=calloc(img.alt,img.alt*sizeof(char*));
       for(unsigned int i=0;i<img.alt;i++){
         img.data[i]=calloc(img.larg,img.larg*sizeof(char));

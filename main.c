@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define DEF_LARG 100
-#define DEF_ALT 100
+#define DEF_LARG 1000
+#define DEF_ALT 1000
 
 typedef struct Pgm {
   unsigned int alt,larg;
@@ -25,14 +25,23 @@ int main(int argc, char *argv[]){
   Pgm img = loadPgm("blank.pgm");
 
   // generates a circle (x,y,r)
-  Pgm circle = drawCircle(img,50,50,30);
+  Pgm circle = drawCircle(img,500,500,300);
   // add noise
   Pgm circle_noise = generateNoise(circle);
   savePgm(circle_noise,255,"noise_circle.pgm");
 
   // try to remove
-  Pgm no_noise = binariza(normaliza(circle_noise),140);
+  Pgm no_noise = binariza(normaliza(circle_noise),250);
   savePgm(no_noise,255,"no_noise.pgm");
+
+  // improve border
+  // Pgm better_border = binariza(normaliza(no_noise),10);
+  // for(int i=0;i<DEF_ALT;i++){
+  //   for(int j=0;j<DEF_LARG;j++){
+  //     img.data[][]=;
+  //   }
+  // }
+  // savePgm(better_border,255,"better_border.pgm");
 
 //  Pgm noise = generateNoise(loadPgm(argv[1]));
 //  savePgm(noise,255,"noise.pgm");
@@ -50,7 +59,10 @@ Pgm generateNoise(Pgm img){
   srand(123);
   for(unsigned int i=0;i<img.alt;i++){
     for(unsigned int j=0;j<img.larg;j++){
-      img.data[i][j]=(2*img.data[i][j]+rand()%255)/3;
+      if(rand()%2==1){
+        img.data[i][j]=255;
+      }
+//      img.data[i][j]=(2*img.data[i][j]+rand()%255)/3;
     }
   }
   return img;
@@ -105,7 +117,7 @@ Pgm normaliza(Pgm img){
 
 Pgm loadPgm(char *filename){
   Pgm img;
-  FILE *f;
+  FILE *f=NULL;
   f=fopen(filename, "w+b");
   if(f!=NULL){
     fscanf(f, "%s\n", img.magic);

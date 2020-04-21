@@ -3,7 +3,7 @@
 
 ## Objectives
 
-* write a program capable of read, write and generate simple pgm images for future data visualization
+* write a program capable of read, write and generate simple pgm images
 * write fuctions capable of manipulating these images
   * noise reduction
   * geometric description of circles

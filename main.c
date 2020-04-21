@@ -21,13 +21,14 @@ Pgm drawCircle(Pgm img,unsigned int x,unsigned int y,unsigned int r);
 int main(int argc, char *argv[]){
 
   // initiate (and save) blank image
+
   Pgm img = loadPgm("blank.pgm");
 
   // generates a circle (x,y,r)
   Pgm circle = drawCircle(img,50,50,30);
   // add noise
   Pgm circle_noise = generateNoise(circle);
-  savePgm(circle_noise,255,"noisecircle.pgm");
+  savePgm(circle_noise,255,"noise_circle.pgm");
 
   // try to remove
   Pgm no_noise = binariza(normaliza(circle_noise),140);

@@ -30,7 +30,7 @@ int main(int argc, char *argv[]){
   savePgm(circle_noise,255,"newcircle.pgm");
 
   // try to remove
-  Pgm no_noise = binariza(normaliza(circle_noise),100);
+  Pgm no_noise = binariza(normaliza(circle_noise),140);
   savePgm(no_noise,255,"no_noise.pgm");
 
   savePgm(normaliza(no_noise),255,"art.pgm");

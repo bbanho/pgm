@@ -10,7 +10,7 @@
 
 ### Plan of implementation: first stage
   - [x] generate a noisy image of a circle
-    - [x] draw a circle by giving parameters
+    - [x] draw a circle by giving its parameters
     - [x] apply noise filter
   - [x] generate and remove greyscale noise
     - [x] normalization

@@ -33,8 +33,6 @@ int main(int argc, char *argv[]){
   Pgm no_noise = binariza(normaliza(circle_noise),140);
   savePgm(no_noise,255,"no_noise.pgm");
 
-  savePgm(normaliza(no_noise),255,"art.pgm");
-
 //  Pgm noise = generateNoise(loadPgm(argv[1]));
 //  savePgm(noise,255,"noise.pgm");
 //

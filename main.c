@@ -21,13 +21,13 @@ Pgm drawCircle(Pgm img,unsigned int x,unsigned int y,unsigned int r);
 int main(int argc, char *argv[]){
 
   // initiate (and save) blank image
-  Pgm img = loadPgm("img.pgm");
+  Pgm img = loadPgm("blank.pgm");
 
   // generates a circle (x,y,r)
   Pgm circle = drawCircle(img,50,50,30);
   // add noise
   Pgm circle_noise = generateNoise(circle);
-  savePgm(circle_noise,255,"newcircle.pgm");
+  savePgm(circle_noise,255,"noisecircle.pgm");
 
   // try to remove
   Pgm no_noise = binariza(normaliza(circle_noise),140);
@@ -106,26 +106,27 @@ Pgm loadPgm(char *filename){
   Pgm img;
   FILE *f;
   f=fopen(filename, "w+b");
-  fscanf(f, "%s\n", img.magic);
-  if(img.magic[1]=='5'){
-    fscanf(f,"%d",&img.larg);
-    fscanf(f,"%d",&img.alt);
-    img.data=calloc(img.alt,img.alt*sizeof(char*));
-    for(unsigned int i=0;i<img.alt;i++){
-      img.data[i]=calloc(img.larg,img.larg*sizeof(char));
-      for(unsigned int j=0;j<img.larg;j++) fscanf(f,"%c",&img.data[i][j]);
+  if(f!=NULL){
+    fscanf(f, "%s\n", img.magic);
+    if(img.magic[1]=='5'){
+      fscanf(f,"%d",&img.larg);
+      fscanf(f,"%d",&img.alt);
+      img.data=calloc(img.alt,img.alt*sizeof(char*));
+      for(unsigned int i=0;i<img.alt;i++){
+        img.data[i]=calloc(img.larg,img.larg*sizeof(char));
+        for(unsigned int j=0;j<img.larg;j++) fscanf(f,"%c",&img.data[i][j]);
+      }
+    } else {
+      img.larg=DEF_LARG; img.alt=DEF_ALT;
+      strcpy(img.magic,"P5");
+      fprintf(f,"%s %d %d\n%d\n",img.magic,img.larg,img.alt,255);
+      img.data=calloc(img.alt,img.alt*sizeof(char*));
+      for(unsigned int i=0;i<img.alt;i++){
+        img.data[i]=calloc(img.larg,img.larg*sizeof(char));
+      }
     }
-  } else {
-    img.larg=DEF_LARG; img.alt=DEF_ALT;
-    strcpy(img.magic,"P5");
-    fprintf(f,"%s %d %d\n%d\n",img.magic,img.larg,img.alt,255);
-    img.data=calloc(img.alt,img.alt*sizeof(char*));
-    for(unsigned int i=0;i<img.alt;i++){
-      img.data[i]=calloc(img.larg,img.larg*sizeof(char));
-      for(unsigned int j=0;j<img.larg;j++) fprintf(f,"%c",img.data[i][j]);
-    }
+    fclose(f);
   }
-  fclose(f);
   return img;
 }
 

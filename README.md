@@ -26,4 +26,4 @@
   > todo
 
 ![Noise generated](gen_noise.png)
-![Removed noise](remove_noise.png)
+![Removed noise](removed_noise.png)

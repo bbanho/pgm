@@ -3,7 +3,7 @@
 #include <string.h>
 
 #define DEF_LARG 500
-#define DEF_ALT  300
+#define DEF_ALT  500
 
 typedef struct Pgm {
   unsigned int alt,larg;

@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define DEF_LARG 30
-#define DEF_ALT  30
+#define DEF_LARG 500
+#define DEF_ALT  300
 
 typedef struct Pgm {
   unsigned int alt,larg;
@@ -26,7 +26,10 @@ int main(int argc, char *argv[]){
   Pgm img = loadPgm("blank.pgm");
 
   // generates a circle (x,y,r)
-  Pgm circle = drawCircle(img,14,15,5);
+  Pgm circle = drawCircle(img,30,40,10);
+  circle = drawCircle(circle,100,200,30);
+  circle=drawCircle(circle,300,200,30);
+  
   // add noise
   Pgm circle_noise = generateNoise(circle);
   savePgm(circle_noise,255,"noise_circle.pgm");

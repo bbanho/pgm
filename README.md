@@ -23,6 +23,7 @@
 ## Results
 
  > Small image (50x50) with extent noise in proportion to the circle
+
 ![Noise generated](gen_noise.png)
 ![Removed noise](removed_noise.png)
 Border loss

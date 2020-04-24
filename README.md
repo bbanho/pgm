@@ -12,7 +12,7 @@
   - [x] generate a noisy image of a circle
     - [x] draw a circle by giving its parameters
     - [x] apply noise filter
-  - [x] generate and remove greyscale noise
+  - [x] generate and remove grayscale noise
     - [x] normalization
     - [x] binarization
   - [ ] obtain multiple circle geometry

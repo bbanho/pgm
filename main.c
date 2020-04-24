@@ -35,24 +35,6 @@ int main(int argc, char *argv[]){
   Pgm no_noise = binariza(normaliza(circle_noise),250);
   savePgm(fixBorder(no_noise),255,"no_noise.pgm");
 
-  // improve border
-  // Pgm better_border = binariza(normaliza(no_noise),10);
-  // for(int i=0;i<DEF_ALT;i++){
-  //   for(int j=0;j<DEF_LARG;j++){
-  //     img.data[][]=;
-  //   }
-  // }
-  // savePgm(better_border,255,"better_border.pgm");
-
-//  Pgm noise = generateNoise(loadPgm(argv[1]));
-//  savePgm(noise,255,"noise.pgm");
-//
-//  // draw circle over noise
-//  Pgm noise_circle = drawCircle(noise,100,100,50);
-//  savePgm(noise_circle,255,"noise_circle.pgm");
-
-  // tries to remove noise around circle
-
   return 0;
 }
 
@@ -75,9 +57,6 @@ Pgm fixBorder(Pgm img){
       if(j==0||j==img.alt-1) img.data[i][j]=0;
       // if i=0 ou i=m
       if(i==0 || i==img.larg-1) img.data[i][j]=0;
-      if(i==0 || j==0){
-
-      }
     }
   }
   return img;

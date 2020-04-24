@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define DEF_LARG 1000
-#define DEF_ALT 1000
+#define DEF_LARG 30
+#define DEF_ALT  30
 
 typedef struct Pgm {
   unsigned int alt,larg;
@@ -12,6 +12,7 @@ typedef struct Pgm {
 } Pgm;
 
 Pgm generateNoise(Pgm img);
+Pgm fixBorder(Pgm img);
 Pgm binariza(Pgm img, unsigned int c);
 Pgm normaliza(Pgm img);
 Pgm loadPgm(char *filename);
@@ -25,14 +26,14 @@ int main(int argc, char *argv[]){
   Pgm img = loadPgm("blank.pgm");
 
   // generates a circle (x,y,r)
-  Pgm circle = drawCircle(img,500,500,300);
+  Pgm circle = drawCircle(img,14,15,5);
   // add noise
   Pgm circle_noise = generateNoise(circle);
   savePgm(circle_noise,255,"noise_circle.pgm");
 
   // try to remove
   Pgm no_noise = binariza(normaliza(circle_noise),250);
-  savePgm(no_noise,255,"no_noise.pgm");
+  savePgm(fixBorder(no_noise),255,"no_noise.pgm");
 
   // improve border
   // Pgm better_border = binariza(normaliza(no_noise),10);
@@ -53,6 +54,33 @@ int main(int argc, char *argv[]){
   // tries to remove noise around circle
 
   return 0;
+}
+
+Pgm fixBorder(Pgm img){
+
+//  i0,j0    i0,j+1 i,j+2   i0,j+n
+//  i+1,j0               i+1,j+n
+//  i+2,j0               i+2,j+n
+//  i+m,j0       i+m,j+1 i+m,j+n
+//
+// t-> i,j++
+// b->> i+m,j++
+//
+// e\/ i++,j0
+// d\/ i++,j+n
+
+  for(unsigned int i=0;i<img.alt;i++){
+    for(unsigned int j=0;j<img.larg;j++){
+      // if j=o ou j=n
+      if(j==0||j==img.alt-1) img.data[i][j]=0;
+      // if i=0 ou i=m
+      if(i==0 || i==img.larg-1) img.data[i][j]=0;
+      if(i==0 || j==0){
+
+      }
+    }
+  }
+  return img;
 }
 
 Pgm generateNoise(Pgm img){

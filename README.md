@@ -7,7 +7,7 @@
 * write fuctions capable of manipulating these images and obtain data
   * noise reduction
   * geometric description of circles
-###
+
   - [x] generate a noisy image of a circle
     - [x] draw a circle by giving its parameters
     - [x] apply noise filter

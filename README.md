@@ -8,7 +8,7 @@
   * noise reduction
   * geometric description of circles
 
-### first stage
+### First stage
 
   - [x] generate a noisy image of a circle
     - [x] draw a circle by giving its parameters
@@ -21,6 +21,10 @@
     - [ ] relative positioning
 
 ## Results
-  
+
+ > Small image (50x50) with extent noise in proportion to the circle
 ![Noise generated](gen_noise.png)
 ![Removed noise](removed_noise.png)
+Border loss
+> Bigger images usually require more than a simple rand() to 
+seem more natural

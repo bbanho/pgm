@@ -17,13 +17,9 @@
     - [x] binarization
   - [ ] obtain multiple circle geometry
     - [ ] absolute position of center
-    - [ ] absolute description of border
     - [ ] relative positioning
-    - [ ] collisions?
 
 ## Results
   
-  > todo
-
 ![Noise generated](gen_noise.png)
 ![Removed noise](removed_noise.png)

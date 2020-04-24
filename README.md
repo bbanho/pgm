@@ -8,6 +8,8 @@
   * noise reduction
   * geometric description of circles
 
+### first stage
+
   - [x] generate a noisy image of a circle
     - [x] draw a circle by giving its parameters
     - [x] apply noise filter

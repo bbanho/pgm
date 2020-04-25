@@ -22,16 +22,12 @@
 
 ## Results
 
-Small image (50x50) with extent noise in proportion to the circle
+Small image (50x50) with extent noise in proportion to the circle size
 
 ![Noise generated](gen_noise.png)
 ![Removed noise](removed_noise.png)
 
-> Border loss
-
-Bigger images usually require more than a simple rand() per pixel as noise
-algorithm. A more natural noise would be best described in parameters of different orders
-of magnitude as seem from further algorithms.
+> Bigger images usually require more than a simple rand() per pixel as noise algorithm. A more natural noise would be best described in parameters of different orders of magnitude as seem from further algorithms.
 
 ![Big image noise](gen_noise_big.png)
 ![Removed noise](removed_noise_big.png)

@@ -28,7 +28,7 @@ Small image (50x50) with extent noise in proportion to the circle size
 ![Removed noise](removed_noise.png)
 
 > Bigger images usually require more than a simple rand() per pixel as noise algorithm. A more natural noise would be best described in parameters of different orders of magnitude as seem from further algorithms.
-> Grouping occurence, color variation, deformation gradients.. A algorithm like Perlin's would help with this problem.
+> Grouping occurence, color variation, deformation gradients.. An algorithm like Perlin's would help with this problem.
 
 ![Big image noise](gen_noise_big.png)
 ![Removed noise](removed_noise_big.png)

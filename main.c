@@ -26,9 +26,7 @@ int main(int argc, char *argv[]){
   Pgm img = loadPgm("blank.pgm");
 
   // generates a circle (x,y,r)
-  Pgm circle = drawCircle(img,30,40,10);
-  circle = drawCircle(circle,100,200,30);
-  circle=drawCircle(circle,300,200,30);
+  Pgm circle = drawCircle(img,251,250,150);
   
   // add noise
   Pgm circle_noise = generateNoise(circle);
